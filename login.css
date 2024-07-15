@@ -1,0 +1,92 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    position: relative;
+    background-color: black;
+    align-items: center;
+    justify-content: center;
+}
+.header{
+    display: flex;
+    position: relative;
+    text-decoration: none;
+    padding: 10px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    top:75px;
+   right: 100px;
+   }
+
+form{
+   display: grid;
+   position: absolute;
+   gap:10px;
+   grid-template-columns: 1fr;
+   flex-direction: column;
+   flex-wrap: wrap;
+   padding: 30px;
+   border: 4px solid wheat;
+   box-shadow: 0 0 10px wheat,
+               0 0 30px wheat,
+               0 0 60px wheat,
+               0 0 100px wheat;
+   border-radius: 10px;
+   text-align: center;
+   justify-content: space-around;
+   opacity: 0;
+   animation: animate 10s ease-in-out 0.4s 1 forwards;
+}
+@keyframes animate{
+    from{
+        opacity: 0;
+        transform: translate(0,50px);
+        filter: blur(15px);
+    }
+    to{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+
+.logo{
+    text-decoration: underline 2px solid red;
+    box-shadow: 6px 2px 4px rgb(180, 53, 98);
+    font-weight: 600;
+    font-style: oblique;
+    color: blue;
+}
+.row{
+    display: inline;
+    position: relative;
+}
+.row input{
+    display: inline;
+    position: relative;
+    flex-wrap: wrap;
+    margin: 5px;
+    border: 1px solid white;
+    border-radius: 3px;
+    padding: 10px;
+    cursor: pointer;
+}
+.row input:nth-child(5){
+    background-color: gold;
+}
+.row input:nth-child(6){
+    background-color: aqua;
+}
+.btn{
+    border: 1px solid white;
+    padding: 5px;
+    cursor: pointer;
+}
+.btn:focus{
+    background-color: gray;
+}
